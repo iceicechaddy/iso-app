@@ -29,7 +29,7 @@ pool.connect(function (err, client, done) {
     console.log('listening on 3000')
   })
   myClient = client
-  var testQuery = format('INSERT INTO action (name) VALUES (%L)', 'Defensive Rebound');
+  var testQuery = format('INSERT INTO event (name, location, drill_id, action_id, player_id, session_id, gametime) VALUES (%L, %L, %L, %L, %L, %L, %L)', '', {x: 85, y: 90}, 2, 2, 2, 1, '17:35:40');
   myClient.query(testQuery, function (err, result) {
     if (err) {
         console.log(err);

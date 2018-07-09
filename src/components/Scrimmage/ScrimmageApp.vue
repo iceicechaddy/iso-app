@@ -14,6 +14,9 @@
       <v-flex md5>
         <v-layout row wrap>
           <v-flex d-flex md12>
+            <Scoreboard />
+          </v-flex>
+          <v-flex d-flex md12>
             <Players />
           </v-flex>
           <v-flex d-flex md12>
@@ -56,7 +59,6 @@ export default {
     actionEventBuilt() {
       if (this.$store.getters.isComplete) {
         let newEvent = this.$store.getters.getEntry;
-
         let timeStamp = this.$store.getters.getTime;
 
         newEvent.timeStamp = timeStamp;

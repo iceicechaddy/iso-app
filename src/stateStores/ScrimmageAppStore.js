@@ -9,7 +9,8 @@ const state = {
     player: null,
     action: null,
     position: null,
-  }
+  },
+  TScore: 0,
 };
 
 const mutations = {
@@ -51,8 +52,15 @@ const actions = {
 
 const getters = {
   isComplete(state) {
-    return state.ActionEntry.player != null && 
-           state.ActionEntry.action != null && 
+    return state.ActionEntry.player != null &&
+           state.ActionEntry.action != null &&
+           state.ActionEntry.position != null &&
+           state.Time != null;
+  },
+  isScore(state) {
+    return state.ActionEntry.player != null &&
+           (state.ActionEntry.action == 'Made Shot' ||
+              state.ActionEntry.action == 'Made FT') &&
            state.ActionEntry.position != null &&
            state.Time != null;
   },
