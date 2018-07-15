@@ -1,5 +1,7 @@
 ## Things left to do to have a MVP
 
+### Scrimmage Tool
+
 ### UI/UX
 - [ ] Thicken court lines
 - [ ] Fix views for all devices
@@ -22,4 +24,7 @@
 - [ ] Save info based on session user (page refresh should not remove data)
 - [ ] Score determined based on court location (no need to choose whether it was a 3 PT or 2 PT)
 
-
+### Homepage
+- [ ] Create Basic Stat Overview Table broken down by player
+      - if the player scored significantly differently than average in a given category (more than 50% compared to their practice average) then the box will be highlighted green or red (for improvement and getting worse, respectively)
+      - stat category leaders can be highlighted in gold
